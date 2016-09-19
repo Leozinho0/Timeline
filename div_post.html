@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body{
+			background-color: grey;
+		}
+		#div_post{
+			background-color: white;
+			border-radius: 15px;
+			width: 700px;
+			margin: 0 auto;
+		}
+		table td{
+			border: 1px solid;
+		}
+		.userpicture{
+			width: 1%;
+		}
+		.username{
+			font-size: 40px;
+		}
+		.content{
+			background-color: yellow;
+			text-align: justify;
+		}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script type="text/javascript">
+		var data;
+		$.getJSON('data.json', function(data) {
+			console.log(data);
+		});
+	</script>
+</head>
+<body>
+	<div id="div_post">
+		<table align="center">
+			<tr>
+				<td class="userpicture" colspan="2" rowspan="2">
+					<img src="http://www.graceweb.tv/fairview/wp-content/uploads/placeholder_girl.png" width="100px" />					
+				</td>
+				<td class="username" colspan="6">
+					Leandro Viana
+				</td>
+			</tr>
+			<tr>
+				<td colspan="6">
+					
+				</td>
+			<tr>
+			<tr>
+				<td class="content" colspan="8">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus neque vero quaerat nemo quisquam repellat dignissimos assumenda, ipsa, vel ratione alias atque architecto autem est et sunt voluptate magni nihil!					
+				</td>
+			</tr>
+			<tr>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>
