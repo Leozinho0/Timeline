@@ -13,6 +13,7 @@ $arr_posts = json_decode(file_get_contents("http://vagalumewifi.com.br/timeline.
 	<style>
 		body{
 			background-image: url("bg.jpg");
+			background-color: #cce6ff;
 			margin: 0;
 		}
 		#div_inform{
@@ -22,6 +23,7 @@ $arr_posts = json_decode(file_get_contents("http://vagalumewifi.com.br/timeline.
 			font-weight: bold;
 			font-size: 20px;
 			padding: 10px;
+			white-space: nowrap;
 		}
 		#div_page_header{
 			padding: 0 200px;
@@ -31,10 +33,10 @@ $arr_posts = json_decode(file_get_contents("http://vagalumewifi.com.br/timeline.
 			float: left;
 		}
 		#div_toolbar{
-			margin-left: 570px;
+			margin-left: 460px;
 			border-radius: 10px;
 			background-color: white; 
-			width: 380px;
+			width: 490px;
 		}
 		#div_toolbar ul{
 			padding: 10px 5px;
@@ -56,11 +58,19 @@ $arr_posts = json_decode(file_get_contents("http://vagalumewifi.com.br/timeline.
 			background-color: white;
 			border-radius: 10px;
 		}
-		#div_timeline_2{
+		#div_rightmenu{
+			margin-left: 650px;
+		}
+		.div_rightmenu{
+			border-radius: 10px;
 			padding: 20px;
 			background-color: #b3daff;
-			border-radius: 10px;
-			margin-left: 650px;
+			margin-bottom: 10px;
+
+		}
+		#div_rightmenu_search{
+			text-align: center;
+			font-size: 15px;
 		}
 		#div_timeline_tweet{
 			text-align: right;
@@ -113,7 +123,7 @@ $arr_posts = json_decode(file_get_contents("http://vagalumewifi.com.br/timeline.
 		<div id="div_timeline_1">
 			<div id="div_timeline_tweet">
 				<span style="font-size: 30px;"> What's hapenning? </span><br />
-				<input type="text" size="95"> <br />
+				<input type="text" size="60"> <br />
 				<button id="button_tweet"> Tweet </button>
 			</div>
 			<div id="div_new_tweets_alert">
@@ -124,7 +134,7 @@ $arr_posts = json_decode(file_get_contents("http://vagalumewifi.com.br/timeline.
 				foreach($arr_posts as $post)
 				{
 				?>
-				<div id="div_timeline_post" style="border-radius: 10px; margin-top: 10px; padding: 10px; background-color: white; width: 580px;">
+				<div id="div_timeline_post" style="border-radius: 10px; margin-top: 10px; padding: 10px; background-color: white; width: 580px; border-bottom: 1px inset grey;">
 					<div id="div_post_header" style="height: 60px;">
 						<div style="float: left;"> 
 							<img src="<?php echo $post->user->picture ?>" width="70" /> 
@@ -148,49 +158,49 @@ $arr_posts = json_decode(file_get_contents("http://vagalumewifi.com.br/timeline.
 				?>
 			</div>
 		</div>
-		<div id="div_timeline_2">
-			asdasda <br />
-			asdasda <br />
-			asdasda <br />
-			asdasda <br />
-			asdasda <br />
-			asdasda <br />
-			asdasda <br />
-			asdasda <br />
-			asdasda <br />
-			asdasda <br />
-			asdasda <br />
-			asdasda <br />
-
-			asdasda <br />
-			asdasda <br />
-			asdasda <br />
-			asdasda <br />
-			asdasda <br />
-			asdasda <br />
-			asdasda <br />
-			asdasda <br />
-			asdasda <br />
-			asdasda <br />
-			asdasda <br />
-			asdasda <br />
-			asdasda <br />
-
-			asdasda <br />
-			asdasda <br />
-			asdasda <br />
-			asdasda <br />
-			asdasda <br />
-			asdasda <br />
-			asdasda <br />
-			asdasda <br />
-			asdasda <br />
-			asdasda <br />
-			asdasda <br />
-			asdasda <br />
-			asdasda <br />
-
-			asdasda <br />
+		<div id="div_rightmenu">
+			<div class="div_rightmenu">
+				<div style="float: left;">
+					<img src="<?php echo $arr_posts[0]->user->picture ?>" width="60" />
+				</div>
+				<div style="margin-left: 70px;">
+					<span style="font-size: 20px; font-weight: bold;"> Leandro Viana </span> <br>
+					<span style="font-size: 15px;">1.254 tweets </span>
+				</div>
+				<div style="font-size: 11px; margin-top: 30px;">
+					<table style="font-size: 14px;">
+						<tr style="font-weight: bold;">
+							<td>1254</td>
+							<td>265</td>
+							<td>689</td>
+						</tr>
+						<tr style="color: blue;">
+							<td>tweets</td>
+							<td>following</td>
+							<td>followers</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div class="div_rightmenu" id="div_rightmenu_search">
+				<input type="search" value="What do you want to search?" style="color: grey; text-align: center;"> <input type="submit" value="Search">
+			</div>
+			<div class="div_rightmenu">
+				<div style="background-color: #b3ecff; text-align: center; padding: 5px; border-radius: 10px;">
+					<span> Trending Topics! </span>
+				</div>
+				<br>
+				<span style="color: blue;"> #NaoVaiTerGolpe </span> <br />
+				<span style="color: blue;"> #ForaTemer </span> <br />
+				<span style="color: blue;"> #StopCoupInBrazil </span> <br />
+				<span style="color: blue;"> #DeathOfDemocracyBR </span> <br />
+				<span style="color: blue;"> #ROTTR </span> <br />
+				<span style="color: blue;"> #ffxv </span> <br />
+				<span style="color: blue;"> #php </span> <br />
+				<span style="color: blue;"> #javascript </span> <br />
+				<span style="color: blue;"> #cplusplus </span> <br />
+				<span style="color: blue;"> #HelloWorld </span> <br />
+			</div>
 		</div>
 	</div>
 </body>
