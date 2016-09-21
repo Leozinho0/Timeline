@@ -8,7 +8,6 @@ $arr_posts = json_decode(file_get_contents("http://vagalumewifi.com.br/timeline.
 <head>
 	<meta charset="UTF-8">
 	<title>Timeline - Home</title>
-	<link rel="stylesheet" type="text/css" href="mainstyle.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 	<style>
 		body{
